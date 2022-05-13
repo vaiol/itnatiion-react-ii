@@ -1,0 +1,9 @@
+.hello {
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
