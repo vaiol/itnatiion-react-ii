@@ -7,8 +7,9 @@ class App extends Component {
     super(props);
     this.state = {
       helloArray: [
-        { destination: 'ItNation', newDestination: 'ItNation 2.0', timeout: 1000 },
+        { destination: 'ItNation', newDestination: 'ItNation 2.0', timeout: 2000 },
         { destination: 'World', newDestination: 'New World!', timeout: 2000 },
+        // { destination: 'New', newDestination: 'Totaly new!', timeout: 10000 },
       ]
     };
   }
