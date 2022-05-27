@@ -6,17 +6,26 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      to: ['ItNation', 'World']
+      helloArray: [
+        { destination: 'ItNation', newDestination: 'ItNation 2.0', timeout: 1000 },
+        { destination: 'World', newDestination: 'New World!', timeout: 2000 },
+      ]
     };
   }
   render() {
     const arrHelloComponents = []
-    for (const to of this.state.to) {
-      arrHelloComponents.push(<Hello to={to}></Hello>);
+    for (const [index, helloItem] of this.state.helloArray.entries()) {
+      arrHelloComponents.push(
+        <Hello
+          key={index}
+          to={helloItem.destination}
+          to2={helloItem.newDestination}
+          timeout={helloItem.timeout}>
+        </Hello>
+      );
     }
     return (
       <div className="App">
-        {this.state.to?.map(to => <Hello to={to}></Hello>)}
         {arrHelloComponents}
       </div>
     );
